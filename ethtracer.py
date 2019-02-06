@@ -63,9 +63,9 @@ def apply_latex_computation(vm, message):
         # Early exit on pre-compiles
         if computation.msg.code_address in CONSTANTINOPLE_OPCODES:
             return CONSTANTINOPLE_OPCODES[computation.msg.code_address](computation)
-        header_row1 = "\nOPCODE | Formal | Stack | Mem | Gas \n"
+        header_row1 = "<table style=\"table.border-collapse: collapse;table.border: 1px solid black; th.border: 1px solid black;td.border: 1px solid black;\"><tr><th>OPCODE</th><th>Formal</th><th>Stack</th><th>Mem</th><th>Gas</th></tr>\n"
         stringy += header_row1
-        stringy += ":---: | :---: | :---: | :---: | :---: \n"
+        stringy += "<tr>"
         for opcode in computation.code:
            opcode_fn = computation.get_opcode_fn(opcode)
            stringy += parse_fn_computation(opcode_fn,opcode,computation) + " \n"
@@ -75,7 +75,8 @@ def apply_latex_computation(vm, message):
                break
            if opcode in BREAK_OPCODES:
               break
-    stringy += "\n"
+           stringy += "</tr>"
+    stringy += "</table>\n"
     return stringy, computation
 
 ADDRESS_C = b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf2"
@@ -110,6 +111,16 @@ if __name__ == "__main__":
     md = md.replace("<script type=\"math/tex; mode=display\">","")
     print("""<!DOCTYPE html><html><head><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+<style>
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+td {
+  vertical-align: center;
+}
+</style>
  <meta charset="UTF-8">
             </head><body>""")
     print(md)
