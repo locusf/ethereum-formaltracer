@@ -1,6 +1,6 @@
 from pylatex import Description
 def format_stack(stack):
-    listed = ""
+    listed = ">"
     for i,item in enumerate(reversed(stack.values)):
-        listed += "* {}, {} <br/>".format(i,hex(item) if isinstance(item,int) else item.hex())
+        listed += "`0x{}` <br/>".format(hex(item) if isinstance(item,int) else item.hex())
     return listed 

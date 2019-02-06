@@ -65,7 +65,7 @@ def apply_latex_computation(vm, message):
             return CONSTANTINOPLE_OPCODES[computation.msg.code_address](computation)
         header_row1 = "\nOPCODE | Formal | Stack | Mem | Gas \n"
         stringy += header_row1
-        stringy += ":--- | :---: | :---: | ---: | ---: \n"
+        stringy += ":---: | :---: | :---: | :---: | :---: \n"
         for opcode in computation.code:
            opcode_fn = computation.get_opcode_fn(opcode)
            stringy += parse_fn_computation(opcode_fn,opcode,computation) + " \n"
@@ -107,6 +107,7 @@ if __name__ == "__main__":
     vm.get_state_class()
     doc, comp = apply_latex_computation(vm,message)
     md = markdown.markdown(doc,extensions=['mdx_math','markdown.extensions.extra'],output_format="html5")
+    md = md.replace("<script type=\"math/tex; mode=display\">","")
     print("""<!DOCTYPE html><html><head><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
  <meta charset="UTF-8">

@@ -5,1231 +5,1231 @@
 <table>
 <thead>
 <tr>
-<th align="left">OPCODE</th>
+<th align="center">OPCODE</th>
 <th align="center">Formal</th>
 <th align="center">Stack</th>
-<th align="right">Mem</th>
-<th align="right">Gas</th>
+<th align="center">Mem</th>
+<th align="center">Gas</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center"></td>
-<td align="right">0</td>
-<td align="right">0</td>
+<td align="center">&gt;</td>
+<td align="center">0</td>
+<td align="center">0</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 60 <br/></td>
-<td align="right">0</td>
-<td align="right">3</td>
+<td align="center">&gt;<code>0x60</code> <br/></td>
+<td align="center">0</td>
+<td align="center">3</td>
 </tr>
 <tr>
-<td align="left">MSTORE</td>
+<td align="center">MSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{m}[ \boldsymbol{\mu}_\mathbf{s}[0] \dots (\boldsymbol{\mu}_\mathbf{s}[0] + 31) ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 40 <br/>* 1, 60 <br/></td>
-<td align="right">0</td>
-<td align="right">6</td>
+<td align="center">&gt;<code>0x40</code> <br/><code>0x60</code> <br/></td>
+<td align="center">0</td>
+<td align="center">6</td>
 </tr>
 <tr>
-<td align="left">CALLVALUE</td>
+<td align="center">CALLVALUE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv I_v</script>
 </td>
-<td align="center"></td>
-<td align="right">96</td>
-<td align="right">18</td>
+<td align="center">&gt;</td>
+<td align="center">96</td>
+<td align="center">18</td>
 </tr>
 <tr>
-<td align="left">ISZERO</td>
+<td align="center">ISZERO</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv<script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0] = 0 \\[2ex] 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0] = 0 \\[2ex] 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0x0 <br/></td>
-<td align="right">96</td>
-<td align="right">20</td>
+<td align="center">&gt;<code>0x0x0</code> <br/></td>
+<td align="center">96</td>
+<td align="center">20</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center">* 0, 0x1 <br/></td>
-<td align="right">96</td>
-<td align="right">23</td>
+<td align="center">&gt;<code>0x0x1</code> <br/></td>
+<td align="center">96</td>
+<td align="center">23</td>
 </tr>
 <tr>
-<td align="left">JUMPI</td>
+<td align="center">JUMPI</td>
 <td align="center">
-<script type="math/tex">J_{\text{JUMPI}}(\boldsymbol{\mu}) \equiv <script type="math/tex; mode=display">\begin{cases} \boldsymbol{\mu}_\mathbf{s}[0] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] \neq 0 \\[2ex] \boldsymbol{\mu}_{pc} + 1 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">J_{\text{JUMPI}}(\boldsymbol{\mu}) \equiv \begin{cases} \boldsymbol{\mu}_\mathbf{s}[0] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] \neq 0 \\[2ex] \boldsymbol{\mu}_{pc} + 1 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 000f <br/>* 1, 0x1 <br/></td>
-<td align="right">96</td>
-<td align="right">26</td>
+<td align="center">&gt;<code>0x000f</code> <br/><code>0x0x1</code> <br/></td>
+<td align="center">96</td>
+<td align="center">26</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center"></td>
-<td align="right">96</td>
-<td align="right">36</td>
+<td align="center">&gt;</td>
+<td align="center">96</td>
+<td align="center">36</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center"></td>
-<td align="right">96</td>
-<td align="right">37</td>
+<td align="center">&gt;</td>
+<td align="center">96</td>
+<td align="center">37</td>
 </tr>
 <tr>
-<td align="left">MLOAD</td>
+<td align="center">MLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] \dots (\boldsymbol{\mu}_\mathbf{s}[0] + 31) ] \\ \boldsymbol{\mu}'_i \equiv \max(\boldsymbol{\mu}_i, \lceil (\boldsymbol{\mu}_\mathbf{s}[0] + 32) \div 32 \rceil )</script>
 </td>
-<td align="center">* 0, 40 <br/></td>
-<td align="right">96</td>
-<td align="right">40</td>
+<td align="center">&gt;<code>0x40</code> <br/></td>
+<td align="center">96</td>
+<td align="center">40</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">96</td>
-<td align="right">43</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">96</td>
+<td align="center">43</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 40 <br/>* 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">96</td>
-<td align="right">46</td>
+<td align="center">&gt;<code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">96</td>
+<td align="center">46</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center">* 0, 40 <br/><em> 1, 40 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">96</td>
-<td align="right">49</td>
+<td align="center">&gt;<code>0x40</code> <br/><code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">96</td>
+<td align="center">49</td>
 </tr>
 <tr>
-<td align="left">DUP4</td>
+<td align="center">DUP4</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
 </td>
-<td align="center">* 0, 2338 <br/><em> 1, 40 <br/></em> 2, 40 <br/>* 3, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">96</td>
-<td align="right">52</td>
+<td align="center">&gt;<code>0x2338</code> <br/><code>0x40</code> <br/><code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">96</td>
+<td align="center">52</td>
 </tr>
 <tr>
-<td align="left">CODECOPY</td>
+<td align="center">CODECOPY</td>
 <td align="center">
-<script type="math/tex">\forall_{i \in \{ 0 \dots \boldsymbol{\mu}_\mathbf{s}[2] - 1\} } \boldsymbol{\mu}'_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] + i ] \equiv <script type="math/tex; mode=display">\begin{cases} I_\mathbf{b}[\boldsymbol{\mu}_\mathbf{s}[1] + i] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] + i < \lVert I_\mathbf{b} \rVert \\[0,2ex] \text{STOP} & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall_{i \in \{ 0 \dots \boldsymbol{\mu}_\mathbf{s}[2] - 1\} } \boldsymbol{\mu}'_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] + i ] \equiv \begin{cases} I_\mathbf{b}[\boldsymbol{\mu}_\mathbf{s}[1] + i] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] + i < \lVert I_\mathbf{b} \rVert \\[0,2ex] \text{STOP} & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 2338 <br/></em> 2, 40 <br/><em> 3, 40 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">96</td>
-<td align="right">55</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x2338</code> <br/><code>0x40</code> <br/><code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">96</td>
+<td align="center">55</td>
 </tr>
 <tr>
-<td align="left">DUP2</td>
+<td align="center">DUP2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 40 <br/>* 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">70</td>
+<td align="center">&gt;<code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">70</td>
 </tr>
 <tr>
-<td align="left">ADD</td>
+<td align="center">ADD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] + \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 40 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">73</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x40</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">73</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0xa0 <br/>* 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">76</td>
+<td align="center">&gt;<code>0x0xa0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">76</td>
 </tr>
 <tr>
-<td align="left">MSTORE</td>
+<td align="center">MSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{m}[ \boldsymbol{\mu}_\mathbf{s}[0] \dots (\boldsymbol{\mu}_\mathbf{s}[0] + 31) ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 40 <br/><em> 1, 0xa0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">79</td>
+<td align="center">&gt;<code>0x40</code> <br/><code>0x0xa0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">79</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">82</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">82</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/>* 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">85</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">85</td>
 </tr>
 <tr>
-<td align="left">MLOAD</td>
+<td align="center">MLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] \dots (\boldsymbol{\mu}_\mathbf{s}[0] + 31) ] \\ \boldsymbol{\mu}'_i \equiv \max(\boldsymbol{\mu}_i, \lceil (\boldsymbol{\mu}_\mathbf{s}[0] + 32) \div 32 \rceil )</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">88</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">88</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/></td>
-<td align="right">160</td>
-<td align="right">91</td>
+<td align="center">&gt;<code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/></td>
+<td align="center">160</td>
+<td align="center">91</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">94</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">94</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">97</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">97</td>
 </tr>
 <tr>
-<td align="left">ADD</td>
+<td align="center">ADD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] + \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 20 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">100</td>
+<td align="center">&gt;<code>0x20</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">100</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x80 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000060 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">103</td>
+<td align="center">&gt;<code>0x0x80</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">103</td>
 </tr>
 <tr>
-<td align="left">MLOAD</td>
+<td align="center">MLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] \dots (\boldsymbol{\mu}_\mathbf{s}[0] + 31) ] \\ \boldsymbol{\mu}'_i \equiv \max(\boldsymbol{\mu}_i, \lceil (\boldsymbol{\mu}_\mathbf{s}[0] + 32) \div 32 \rceil )</script>
 </td>
-<td align="center">* 0, 0x80 <br/><em> 1, 0x80 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">106</td>
+<td align="center">&gt;<code>0x0x80</code> <br/><code>0x0x80</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">106</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/><em> 1, 0x80 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000060 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">109</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x0x80</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">109</td>
 </tr>
 <tr>
-<td align="left">POP</td>
-<td align="center">
-<script type="math/tex">\boldsymbol{\mu}_\mathbf{s}[0] = nil</script>
-</td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000060 <br/><em> 1, 0x80 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">112</td>
-</tr>
-<tr>
-<td align="left">POP</td>
+<td align="center">POP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}_\mathbf{s}[0] = nil</script>
 </td>
-<td align="center">* 0, 0x80 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">114</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000060</code> <br/><code>0x0x80</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">112</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">POP</td>
+<td align="center">
+<script type="math/tex">\boldsymbol{\mu}_\mathbf{s}[0] = nil</script>
+</td>
+<td align="center">&gt;<code>0x0x80</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">114</td>
+</tr>
+<tr>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">116</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">116</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">117</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">117</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">118</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">118</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">121</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">121</td>
 </tr>
 <tr>
-<td align="left">SLOAD</td>
+<td align="center">SLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\sigma}[I_a]_\mathbf{s}[\boldsymbol{\mu}_\mathbf{s}[0]]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">124</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">124</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">324</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">324</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">327</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">327</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a0 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">330</td>
+<td align="center">&gt;<code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">330</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a0 <br/></em> 2, 01 <br/><em> 3, 0x0 <br/></em> 4, 0x0 <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">333</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">333</td>
 </tr>
 <tr>
-<td align="left">SUB</td>
+<td align="center">SUB</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] - \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0x10000000000000000000000000000000000000000 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">393</td>
+<td align="center">&gt;<code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">393</td>
 </tr>
 <tr>
-<td align="left">NOT</td>
+<td align="center">NOT</td>
 <td align="center">
-<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv <script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">396</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">396</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">399</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">399</td>
 </tr>
 <tr>
-<td align="left">CALLER</td>
+<td align="center">CALLER</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv I_s</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">402</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">402</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">404</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">404</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0000000000000000000000000000000000000000 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">407</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">407</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a0 <br/><em> 1, 01 <br/></em> 2, 0000000000000000000000000000000000000000 <br/><em> 3, 0x0 <br/></em> 4, 0x0 <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">410</td>
+<td align="center">&gt;<code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">410</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a0 <br/></em> 2, 01 <br/><em> 3, 0000000000000000000000000000000000000000 <br/></em> 4, 0x0 <br/><em> 5, 0x0 <br/></em> 6, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 7, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">413</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">413</td>
 </tr>
 <tr>
-<td align="left">SUB</td>
+<td align="center">SUB</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] - \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0x10000000000000000000000000000000000000000 <br/><em> 1, 01 <br/></em> 2, 0000000000000000000000000000000000000000 <br/><em> 3, 0x0 <br/></em> 4, 0x0 <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">473</td>
+<td align="center">&gt;<code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">473</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0000000000000000000000000000000000000000 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">476</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">476</td>
 </tr>
 <tr>
-<td align="left">OR</td>
+<td align="center">OR</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \vee \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">479</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">479</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">482</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">482</td>
 </tr>
 <tr>
-<td align="left">SSTORE</td>
+<td align="center">SSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\sigma}'[I_a]_\mathbf{s}[ \boldsymbol{\mu}_\mathbf{s}[0] ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">485</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">485</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">685</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">685</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">686</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">686</td>
 </tr>
 <tr>
-<td align="left">SLOAD</td>
+<td align="center">SLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\sigma}[I_a]_\mathbf{s}[\boldsymbol{\mu}_\mathbf{s}[0]]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">689</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">689</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">889</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">889</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0x0 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">892</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">892</td>
 </tr>
 <tr>
-<td align="left">SLOAD</td>
+<td align="center">SLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\sigma}[I_a]_\mathbf{s}[\boldsymbol{\mu}_\mathbf{s}[0]]</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">895</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">895</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1095</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1095</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0x0 <br/></em> 2, 01 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1098</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1098</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a0 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0x0 <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1101</td>
+<td align="center">&gt;<code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1101</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a0 <br/></em> 2, 01 <br/><em> 3, 0x0 <br/></em> 4, 01 <br/><em> 5, 0x0 <br/></em> 6, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 7, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1104</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1104</td>
 </tr>
 <tr>
-<td align="left">SUB</td>
+<td align="center">SUB</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] - \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0x10000000000000000000000000000000000000000 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0x0 <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1164</td>
+<td align="center">&gt;<code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1164</td>
 </tr>
 <tr>
-<td align="left">SWAP3</td>
+<td align="center">SWAP3</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3] \newline \boldsymbol{\mu}'_\mathbf{s}[3] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3] \\ \boldsymbol{\mu}'_\mathbf{s}[3] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 01 <br/><em> 3, 0x0 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1167</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1167</td>
 </tr>
 <tr>
-<td align="left">DUP4</td>
+<td align="center">DUP4</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 01 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1170</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1170</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1173</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1173</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 01 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1176</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1176</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1179</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1179</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a0 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 01 <br/><em> 5, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 6, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 7, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1182</td>
+<td align="center">&gt;<code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1182</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a0 <br/></em> 2, 01 <br/><em> 3, 0x0 <br/></em> 4, 0x0 <br/><em> 5, 01 <br/></em> 6, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 7, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 8, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1185</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa0</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1185</td>
 </tr>
 <tr>
-<td align="left">SUB</td>
+<td align="center">SUB</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] - \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0x10000000000000000000000000000000000000000 <br/><em> 1, 01 <br/></em> 2, 0x0 <br/><em> 3, 0x0 <br/></em> 4, 01 <br/><em> 5, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 6, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 7, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1245</td>
+<td align="center">&gt;<code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1245</td>
 </tr>
 <tr>
-<td align="left">NOT</td>
+<td align="center">NOT</td>
 <td align="center">
-<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv <script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1248</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1248</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1251</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1251</td>
 </tr>
 <tr>
-<td align="left">DUP3</td>
+<td align="center">DUP3</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1254</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1254</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/></em> 4, 01 <br/><em> 5, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 6, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 7, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1257</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1257</td>
 </tr>
 <tr>
-<td align="left">OR</td>
+<td align="center">OR</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \vee \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 01 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1260</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1260</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/></em> 2, 01 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1263</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1263</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 01 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1266</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x01</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1266</td>
 </tr>
 <tr>
-<td align="left">SSTORE</td>
+<td align="center">SSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\sigma}'[I_a]_\mathbf{s}[ \boldsymbol{\mu}_\mathbf{s}[0] ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 01 <br/><em> 1, 0x0 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1269</td>
+<td align="center">&gt;<code>0x01</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1269</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1469</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1469</td>
 </tr>
 <tr>
-<td align="left">DUP5</td>
+<td align="center">DUP5</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[4]</script>
 </td>
-<td align="center">* 0, 04 <br/><em> 1, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/></em> 2, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1472</td>
+<td align="center">&gt;<code>0x04</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1472</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/><em> 1, 04 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1475</td>
+<td align="center">&gt;<code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/><code>0x04</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1475</td>
 </tr>
 <tr>
-<td align="left">SSTORE</td>
+<td align="center">SSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\sigma}'[I_a]_\mathbf{s}[ \boldsymbol{\mu}_\mathbf{s}[0] ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 04 <br/><em> 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">1478</td>
+<td align="center">&gt;<code>0x04</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">1478</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21478</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21478</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/></em> 2, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21481</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21481</td>
 </tr>
 <tr>
-<td align="left">SLOAD</td>
+<td align="center">SLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\sigma}[I_a]_\mathbf{s}[\boldsymbol{\mu}_\mathbf{s}[0]]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 08 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21484</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21484</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 08 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21684</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21684</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 0x0 <br/></em> 2, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21687</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21687</td>
 </tr>
 <tr>
-<td align="left">AND</td>
-<td align="center">
-<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
-</td>
-<td align="center">* 0, 0xffffffffffffffffffffffff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21690</td>
-</tr>
-<tr>
-<td align="left">DUP4</td>
-<td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
-</td>
-<td align="center">* 0, 0x0 <br/><em> 1, 08 <br/></em> 2, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21693</td>
-</tr>
-<tr>
-<td align="left">DUP4</td>
-<td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
-</td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21696</td>
-</tr>
-<tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21699</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21690</td>
 </tr>
 <tr>
-<td align="left">OR</td>
+<td align="center">DUP4</td>
+<td align="center">
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
+</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21693</td>
+</tr>
+<tr>
+<td align="center">DUP4</td>
+<td align="center">
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[3]</script>
+</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21696</td>
+</tr>
+<tr>
+<td align="center">AND</td>
+<td align="center">
+<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
+</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21699</td>
+</tr>
+<tr>
+<td align="center">OR</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \vee \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21702</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21702</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 08 <br/></em> 2, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21705</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21705</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a0 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21708</td>
+<td align="center">&gt;<code>0xa0</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21708</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a0 <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21711</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa0</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21711</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x10000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21771</td>
+<td align="center">&gt;<code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21771</td>
 </tr>
 <tr>
-<td align="left">MUL</td>
+<td align="center">MUL</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] \times \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, ff <br/><em> 1, 0x10000000000000000000000000000000000000000 <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21774</td>
+<td align="center">&gt;<code>0xff</code> <br/><code>0x0x10000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21774</td>
 </tr>
 <tr>
-<td align="left">NOT</td>
+<td align="center">NOT</td>
 <td align="center">
-<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv <script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0xff0000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21779</td>
+<td align="center">&gt;<code>0x0xff0000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21779</td>
 </tr>
 <tr>
-<td align="left">DUP2</td>
+<td align="center">DUP2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffffffff00ffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21782</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffffffff00ffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21782</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0xffffffffffffffffffffff00ffffffffffffffffffffffffffffffffffffffff <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0xffffffffffffffffffffffffffffffffffffffff <br/><em> 5, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 6, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21785</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffff00ffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21785</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21788</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21788</td>
 </tr>
 <tr>
-<td align="left">SWAP2</td>
+<td align="center">SWAP2</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \newline \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[2] \\ \boldsymbol{\mu}'_\mathbf{s}[2] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21791</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21791</td>
 </tr>
 <tr>
-<td align="left">SSTORE</td>
+<td align="center">SSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\sigma}'[I_a]_\mathbf{s}[ \boldsymbol{\mu}_\mathbf{s}[0] ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 0x0 <br/></em> 2, 0x0 <br/><em> 3, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21794</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x0x0</code> <br/><code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21794</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0xffffffffffffffffffffffffffffffffffffffff <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21994</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0xffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21994</td>
 </tr>
 <tr>
-<td align="left">ISZERO</td>
+<td align="center">ISZERO</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv<script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0] = 0 \\[2ex] 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0] = 0 \\[2ex] 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">21997</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">21997</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center">* 0, 0x1 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22000</td>
+<td align="center">&gt;<code>0x0x1</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22000</td>
 </tr>
 <tr>
-<td align="left">JUMPI</td>
+<td align="center">JUMPI</td>
 <td align="center">
-<script type="math/tex">J_{\text{JUMPI}}(\boldsymbol{\mu}) \equiv <script type="math/tex; mode=display">\begin{cases} \boldsymbol{\mu}_\mathbf{s}[0] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] \neq 0 \\[2ex] \boldsymbol{\mu}_{pc} + 1 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">J_{\text{JUMPI}}(\boldsymbol{\mu}) \equiv \begin{cases} \boldsymbol{\mu}_\mathbf{s}[0] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] \neq 0 \\[2ex] \boldsymbol{\mu}_{pc} + 1 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0130 <br/><em> 1, 0x1 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22003</td>
+<td align="center">&gt;<code>0x0130</code> <br/><code>0x0x1</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22003</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22013</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22013</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22014</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22014</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 2, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22017</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22017</td>
 </tr>
 <tr>
-<td align="left">SLOAD</td>
+<td align="center">SLOAD</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\sigma}[I_a]_\mathbf{s}[\boldsymbol{\mu}_\mathbf{s}[0]]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 08 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22020</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22020</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 08 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22220</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22220</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, a8 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22223</td>
+<td align="center">&gt;<code>0xa8</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22223</td>
 </tr>
 <tr>
-<td align="left">EXP</td>
+<td align="center">EXP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] ^ {\boldsymbol{\mu}_\mathbf{s}[1] }</script>
 </td>
-<td align="center">* 0, 02 <br/><em> 1, a8 <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22226</td>
+<td align="center">&gt;<code>0x02</code> <br/><code>0xa8</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22226</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center">* 0, 0x1000000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22286</td>
+<td align="center">&gt;<code>0x0x1000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22286</td>
 </tr>
 <tr>
-<td align="left">MUL</td>
+<td align="center">MUL</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0] \times \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, ffff <br/><em> 1, 0x1000000000000000000000000000000000000000000 <br/></em> 2, 0x0 <br/><em> 3, 08 <br/></em> 4, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 5, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22289</td>
+<td align="center">&gt;<code>0xffff</code> <br/><code>0x0x1000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22289</td>
 </tr>
 <tr>
-<td align="left">NOT</td>
+<td align="center">NOT</td>
 <td align="center">
-<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv <script type="math/tex; mode=display">\begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \begin{cases} 1 & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[0]_i = 0 \\ 0 & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0xffff000000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22294</td>
+<td align="center">&gt;<code>0x0xffff000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22294</td>
 </tr>
 <tr>
-<td align="left">AND</td>
+<td align="center">AND</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \wedge \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 0xffffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffff <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22297</td>
+<td align="center">&gt;<code>0x0xffffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffff</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22297</td>
 </tr>
 <tr>
-<td align="left">PUSH22</td>
+<td align="center">PUSH22</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 22) \big)</script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 08 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22300</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22300</td>
 </tr>
 <tr>
-<td align="left">OR</td>
+<td align="center">OR</td>
 <td align="center">
 <script type="math/tex">\forall i \in [0..255]: \boldsymbol{\mu}'_\mathbf{s}[0]_i \equiv \boldsymbol{\mu}_\mathbf{s}[0]_i \vee \boldsymbol{\mu}_\mathbf{s}[1]_i</script>
 </td>
-<td align="center">* 0, 01000000000000000000000000000000000000000000 <br/><em> 1, 0x0 <br/></em> 2, 08 <br/><em> 3, 0000000000000000000000000000000000000000000000000000000000000000 <br/></em> 4, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22303</td>
+<td align="center">&gt;<code>0x01000000000000000000000000000000000000000000</code> <br/><code>0x0x0</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22303</td>
 </tr>
 <tr>
-<td align="left">SWAP1</td>
+<td align="center">SWAP1</td>
 <td align="center">
-<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \newline \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
+<script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[1] \\ \boldsymbol{\mu}'_\mathbf{s}[1] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 0x1000000000000000000000000000000000000000000 <br/><em> 1, 08 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22306</td>
+<td align="center">&gt;<code>0x0x1000000000000000000000000000000000000000000</code> <br/><code>0x08</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22306</td>
 </tr>
 <tr>
-<td align="left">SSTORE</td>
+<td align="center">SSTORE</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\sigma}'[I_a]_\mathbf{s}[ \boldsymbol{\mu}_\mathbf{s}[0] ] \equiv \boldsymbol{\mu}_\mathbf{s}[1]</script>
 </td>
-<td align="center">* 0, 08 <br/><em> 1, 0x1000000000000000000000000000000000000000000 <br/></em> 2, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 3, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">22309</td>
+<td align="center">&gt;<code>0x08</code> <br/><code>0x0x1000000000000000000000000000000000000000000</code> <br/><code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">22309</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">42309</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42309</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">42310</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42310</td>
 </tr>
 <tr>
-<td align="left">POP</td>
+<td align="center">POP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}_\mathbf{s}[0] = nil</script>
 </td>
-<td align="center">* 0, 0000000000000000000000000000000000000000000000000000000000000000 <br/>* 1, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">42311</td>
+<td align="center">&gt;<code>0x0000000000000000000000000000000000000000000000000000000000000000</code> <br/><code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42311</td>
 </tr>
 <tr>
-<td align="left">POP</td>
+<td align="center">POP</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}_\mathbf{s}[0] = nil</script>
 </td>
-<td align="center">* 0, 000000000000000000000000000000000000000000000000000aa87bee538000 <br/></td>
-<td align="right">160</td>
-<td align="right">42313</td>
+<td align="center">&gt;<code>0x000000000000000000000000000000000000000000000000000aa87bee538000</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42313</td>
 </tr>
 <tr>
-<td align="left">JUMPDEST</td>
+<td align="center">JUMPDEST</td>
 <td align="center"></td>
-<td align="center"></td>
-<td align="right">160</td>
-<td align="right">42315</td>
+<td align="center">&gt;</td>
+<td align="center">160</td>
+<td align="center">42315</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center"></td>
-<td align="right">160</td>
-<td align="right">42316</td>
+<td align="center">&gt;</td>
+<td align="center">160</td>
+<td align="center">42316</td>
 </tr>
 <tr>
-<td align="left">DUP1</td>
+<td align="center">DUP1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{\mu}_\mathbf{s}[0]</script>
 </td>
-<td align="center">* 0, 21cb <br/></td>
-<td align="right">160</td>
-<td align="right">42319</td>
+<td align="center">&gt;<code>0x21cb</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42319</td>
 </tr>
 <tr>
-<td align="left">PUSH2</td>
+<td align="center">PUSH2</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv \boldsymbol{c}\big( (\boldsymbol{\mu}_{pc} + 1) \dots (\boldsymbol{\mu}_{pc} + 2) \big)</script>
 </td>
-<td align="center">* 0, 21cb <br/>* 1, 21cb <br/></td>
-<td align="right">160</td>
-<td align="right">42322</td>
+<td align="center">&gt;<code>0x21cb</code> <br/><code>0x21cb</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42322</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 016d <br/><em> 1, 21cb <br/></em> 2, 21cb <br/></td>
-<td align="right">160</td>
-<td align="right">42325</td>
+<td align="center">&gt;<code>0x016d</code> <br/><code>0x21cb</code> <br/><code>0x21cb</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42325</td>
 </tr>
 <tr>
-<td align="left">CODECOPY</td>
+<td align="center">CODECOPY</td>
 <td align="center">
-<script type="math/tex">\forall_{i \in \{ 0 \dots \boldsymbol{\mu}_\mathbf{s}[2] - 1\} } \boldsymbol{\mu}'_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] + i ] \equiv <script type="math/tex; mode=display">\begin{cases} I_\mathbf{b}[\boldsymbol{\mu}_\mathbf{s}[1] + i] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] + i < \lVert I_\mathbf{b} \rVert \\[0,2ex] \text{STOP} & \text{otherwise} \end{cases}</script>
+<script type="math/tex">\forall_{i \in \{ 0 \dots \boldsymbol{\mu}_\mathbf{s}[2] - 1\} } \boldsymbol{\mu}'_\mathbf{m}[\boldsymbol{\mu}_\mathbf{s}[0] + i ] \equiv \begin{cases} I_\mathbf{b}[\boldsymbol{\mu}_\mathbf{s}[1] + i] & \text{if} \quad \boldsymbol{\mu}_\mathbf{s}[1] + i < \lVert I_\mathbf{b} \rVert \\[0,2ex] \text{STOP} & \text{otherwise} \end{cases}</script>
 </script>
 </td>
-<td align="center">* 0, 0x0 <br/><em> 1, 016d <br/></em> 2, 21cb <br/>* 3, 21cb <br/></td>
-<td align="right">160</td>
-<td align="right">42328</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x016d</code> <br/><code>0x21cb</code> <br/><code>0x21cb</code> <br/></td>
+<td align="center">160</td>
+<td align="center">42328</td>
 </tr>
 <tr>
-<td align="left">PUSH1</td>
+<td align="center">PUSH1</td>
 <td align="center">
 <script type="math/tex">\boldsymbol{\mu}'_\mathbf{s}[0] \equiv c(\boldsymbol{\mu}_{pc} + 1)</script>
 </td>
-<td align="center">* 0, 21cb <br/></td>
-<td align="right">8672</td>
-<td align="right">44085</td>
+<td align="center">&gt;<code>0x21cb</code> <br/></td>
+<td align="center">8672</td>
+<td align="center">44085</td>
 </tr>
 <tr>
-<td align="left">RETURN</td>
+<td align="center">RETURN</td>
 <td align="center">
 <script type="math/tex">H_{\text{RETURN}}(\boldsymbol{\mu}) \equiv \boldsymbol{\mu}_\mathbf{m}[ \boldsymbol{\mu}_\mathbf{s}[0] \dots ( \boldsymbol{\mu}_\mathbf{s}[0] + \boldsymbol{\mu}_\mathbf{s}[1] - 1 ) ]</script>
 </td>
-<td align="center">* 0, 0x0 <br/>* 1, 21cb <br/></td>
-<td align="right">8672</td>
-<td align="right">44088</td>
+<td align="center">&gt;<code>0x0x0</code> <br/><code>0x21cb</code> <br/></td>
+<td align="center">8672</td>
+<td align="center">44088</td>
 </tr>
 </tbody>
 </table>
